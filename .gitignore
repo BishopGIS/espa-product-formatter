@@ -17,3 +17,9 @@ src/raw_binary/tools/create_land_water_mask
 src/raw_binary/tools/espa_band_subset
 src/raw_binary/tools/espa_product_subset
 
+# Build
+/build
+/inst
+
+# Tmp
+*~
