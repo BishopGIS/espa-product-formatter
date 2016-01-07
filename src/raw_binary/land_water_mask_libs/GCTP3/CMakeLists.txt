@@ -180,3 +180,4 @@ add_custom_command(TARGET target ${SPLOAD_LUT_GEN} POST_BUILD
   VERBATIM
 )
 
+# TODO: install somethere generated files
