@@ -27,7 +27,7 @@
 
 cmake_minimum_required(VERSION 2.8.10 FATAL_ERROR)
 
-project(espa-product-formatter)
+project(espa-product-formatter C)
 
 # some init settings
 set(CMAKE_COLOR_MAKEFILE ON)
@@ -46,6 +46,7 @@ set(PACKAGE_VERSION "${PACKAGE_VERSION_MAJOR}.${PACKAGE_VERSION_MINOR}")
 include(util)
 report_version(${PROJECT_NAME} ${PACKAGE_VERSION})  
 
+include(configure)
 configure_file(${CMAKE_MODULE_PATH}/cmake_uninstall.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake IMMEDIATE @ONLY)
 
 if(BUILD_SHARED_LIBS)
@@ -56,6 +57,7 @@ endif()
 
 add_subdirectory(py_modules)
 # add_subdirectory(scripts) - note: directory is empty
+add_subdirectory(port)
 add_subdirectory(src/raw_binary)
 
 install(DIRECTORY schema DESTINATION ${CMAKE_INSTALL_PREFIX}/schema PATTERN "*.xsd")

@@ -20,10 +20,7 @@ Date         Programmer       Reason
 
 NOTES:
 *****************************************************************************/
-#include <getopt.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include "error_handler.h"
 #include "l8_angles.h"
 

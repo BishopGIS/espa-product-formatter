@@ -1,8 +1,7 @@
 /* Standard Library Includes */
-#include <libgen.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
+#include "espa.h"
+
+typedef unsigned short      ushort;
 
 /* IAS Library Includes */
 #include "ias_logging.h"
@@ -95,7 +94,7 @@ int l8_per_pixel_angles
     size_t angle_size;                /* Malloc angle size */
     L8_ANGLES_PARAMETERS parameters;  /* Parameters read in from file */
     IAS_ANGLE_GEN_METADATA metadata;  /* Angle metadata structure */ 
-    char root_filename[PATH_MAX];     /* Root filename */
+    char root_filename[MAXPATHLEN];     /* Root filename */
     char *base_ptr;                   /* Basename pointer */
     double r2d = 4500.0 / atan(1.0);  /* Conversion to hundredths of degrees */
 

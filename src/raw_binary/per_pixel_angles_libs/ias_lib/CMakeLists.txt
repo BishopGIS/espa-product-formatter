@@ -34,7 +34,6 @@ include_directories (
 set(LIB_NAME espa_l8_ang)
 
 set(HDRS
-	config.h
 	ias_angle_gen_distro.h
 	ias_angle_gen_private.h
 	ias_angle_gen_includes.h
@@ -80,6 +79,15 @@ set(SRCS
 )
 
 add_library (${LIB_NAME} ${LIB_TYPE} ${HDRS} ${SRCS})
+
+if(DEPENDENCY_LIB)
+    add_dependencies(${LIB_NAME} ${DEPENDENCY_LIB})  
+endif()    
+if(TARGET_LINK_LIB)
+    list(REMOVE_DUPLICATES TARGET_LINK_LIB)
+    target_link_libraries(${LIB_NAME} PRIVATE ${TARGET_LINK_LIB})
+endif()    
+
 
 set(TARGET_LINK_LIB ${TARGET_LINK_LIB} ${LIB_NAME} PARENT_SCOPE)
 

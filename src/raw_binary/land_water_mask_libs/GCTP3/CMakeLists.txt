@@ -112,6 +112,15 @@ set(SRCS
 
 add_library (${LIB_NAME} ${LIB_TYPE} ${HDRS} ${HDRS_PRIVATE} ${SRCS})
 
+if(DEPENDENCY_LIB)
+    add_dependencies(${LIB_NAME} ${DEPENDENCY_LIB})  
+endif()    
+if(TARGET_LINK_LIB)
+    list(REMOVE_DUPLICATES TARGET_LINK_LIB)
+    target_link_libraries(${LIB_NAME} PRIVATE ${TARGET_LINK_LIB})
+endif()    
+
+
 set(TARGET_LINK_LIB ${TARGET_LINK_LIB} ${LIB_NAME} PARENT_SCOPE)
 
 if (BUILD_SHARED_LIBS)
@@ -170,12 +179,13 @@ add_executable(${SPLOAD_LUT_GEN} spload.c)
 foreach(SHARE_DATA_FILE ${SHARE_DATA_FILES})
   add_custom_command(TARGET ${SPLOAD_LUT_GEN} PRE_BUILD
                      COMMAND ${CMAKE_COMMAND} -E
-                         copy ${SHARE_DATA_FILE} $<TARGET_FILE_DIR:${SPLOAD_LUT_GEN}>)
+                         copy ${SHARE_DATA_FILE} ${CMAKE_CURRENT_BINARY_DIR}) #$<TARGET_FILE_DIR:${SPLOAD_LUT_GEN}>
 endforeach()
 
-add_custom_command(TARGET target ${SPLOAD_LUT_GEN} POST_BUILD
+add_custom_command(TARGET ${SPLOAD_LUT_GEN} POST_BUILD
   COMMAND ${SPLOAD_LUT_GEN} > out.log
   DEPENDS ${SPLOAD_LUT_GEN}
+  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
   COMMENT "Generate LUT files"
   VERBATIM
 )

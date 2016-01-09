@@ -20,9 +20,7 @@ NOTES:
      the ESPA internal metadata format is available at
      http://espa.cr.usgs.gov/schema/espa_internal_metadata_v1_0.xsd.
 *****************************************************************************/
-#include <unistd.h>
-#include <math.h>
-#include <ctype.h>
+#include "espa.h"
 #include "convert_modis_to_espa.h"
 
 /******************************************************************************

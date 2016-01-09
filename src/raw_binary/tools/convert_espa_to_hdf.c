@@ -22,7 +22,7 @@ NOTES:
      The schema for the ESPA internal metadata format is available at
      http://espa.cr.usgs.gov/schema/espa_internal_metadata_v1_0.xsd.
 *****************************************************************************/
-#include <getopt.h>
+#include "espa.h"
 #include "convert_espa_to_hdf.h"
 
 /******************************************************************************

@@ -61,7 +61,12 @@ struct gctp_transformation
                                    been converted to the new interface yet */
 };
 
+#ifdef WIN32
+#define PRINT_FORMAT_ATTRIBUTE
+#else
 #define PRINT_FORMAT_ATTRIBUTE  __attribute__ ((format(printf,4,5)))
+#endif
+
 void gctp_print_message 
 (
     GCTP_MESSAGE_TYPE_ENUM message_type, /* I: message type */

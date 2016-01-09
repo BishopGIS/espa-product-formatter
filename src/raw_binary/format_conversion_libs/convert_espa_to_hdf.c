@@ -22,8 +22,8 @@ NOTES:
      http://espa.cr.usgs.gov/schema/espa_internal_metadata_v1_0.xsd.
 *****************************************************************************/
 
-#include <unistd.h>
-#include <math.h>
+#include "espa.h"
+
 #include "HE2_config.h"
 #include "convert_espa_to_hdf.h"
 

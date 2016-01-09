@@ -1,8 +1,7 @@
 #ifndef _L8_ANGLES_H_
 #define _L8_ANGLES_H_
 
-/* Standard Library Includes */
-#include <limits.h>
+#include "espa.h"
 
 /* IAS Library Includes */
 #include "ias_angle_gen_distro.h"
@@ -39,7 +38,7 @@ typedef struct angles_frame
 typedef struct l8_angles_parameters
 {
     int process_band[IAS_MAX_NBANDS]; /* Process bands array */
-    char metadata_filename[PATH_MAX]; /* Metadata filename */
+    char metadata_filename[MAXPATHLEN]; /* Metadata filename */
     int use_dem_flag;            /* Flag used to check if DEM should be used */
     ANGLE_TYPE angle_type;       /* Type of angles to be generated */
     int sub_sample_factor;       /* Sub-sampling factor to be used */

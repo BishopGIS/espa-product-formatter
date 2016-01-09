@@ -20,7 +20,7 @@ NOTES:
      the ESPA internal metadata format is available at
      http://espa.cr.usgs.gov/schema/espa_internal_metadata_v1_0.xsd.
 *****************************************************************************/
-#include <unistd.h>
+#include "espa.h"
 #include "convert_espa_to_raw_binary_bip.h"
 
 /******************************************************************************
@@ -79,7 +79,7 @@ int convert_espa_to_raw_binary_bip
     int curr_ipix;              /* index for current input pixel */
     int curr_opix;              /* index for current output pixel */
     int number_elements;        /* number of elements per line for all bands */
-    void *file_buf = NULL;      /* pointer to correct input file buffer */
+    char *file_buf = NULL;      /* pointer to correct input file buffer */
     uint8 *tmp_buf_u8 = NULL;   /* buffer for uint8 QA data to be read */
     uint8 *file_buf_u8 = NULL;  /* buffer for uint8 data to be read */
     int16 *file_buf_i16 = NULL; /* buffer for int16 data to be read */
@@ -324,7 +324,7 @@ int convert_espa_to_raw_binary_bip
             }
             else
             {
-                /* Read the current line from the raw binary file */
+                /* Read the current line from the raw binary file */                
                 if (read_raw_binary (fp_rb[i], 1, bmeta[0].nsamps, nbytes,
                     file_buf + (i*nbytes_line)) != SUCCESS)
                 {

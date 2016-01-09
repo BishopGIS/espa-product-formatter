@@ -33,7 +33,7 @@ Notes on use:
 ****************************************************************************/
 /* Allow GCC to error check the parameters to the ias_log_message routine
    like it is a printf statement */
-#ifdef SWIG
+#if defined SWIG || defined WIN32 
 #define PRINT_FORMAT_ATTRIBUTE
 #define PRINT_FORMAT_ATTRIBUTE_WC
 #else

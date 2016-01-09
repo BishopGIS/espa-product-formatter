@@ -5,12 +5,7 @@ NAME: ias_logging.c
 PURPOSE: Implements the standard message logging interface 
 
 **************************************************************************/
-
-#include <stdlib.h>
-#include <stdarg.h>
-#include <string.h>
-#include <time.h>
-#include <unistd.h>
+#include "espa.h"
 
 #define LOGGING_C
 #include "ias_logging.h"
@@ -245,18 +240,20 @@ static int is_channel_enabled
         return TRUE;
 
     /* build the search string (prepend/append commas) */
-    char search_str[strlen(channel) + 3];
+    char *search_str = malloc(strlen(channel) + 3);
     sprintf(search_str, ",%s,", channel);
 
     /* return true if the channel is found in the channel list */
     if ( strstr(ias_log_channels, search_str) != NULL )
     {
+        free(search_str);
         if ( use_blacklist )
             return FALSE;
         else
             return TRUE;
     }
 
+    free(search_str);
     if ( use_blacklist )
         return TRUE;
     else

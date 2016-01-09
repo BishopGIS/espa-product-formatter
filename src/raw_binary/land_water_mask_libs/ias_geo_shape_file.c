@@ -1,8 +1,4 @@
-/* Standard Library Includes */
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
+#include "espa.h"
 
 /* IAS Library Includes */
 #include "ias_lw_geo.h"

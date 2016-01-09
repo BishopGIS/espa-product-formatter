@@ -16,11 +16,7 @@ Date         Programmer       Reason
 
 NOTES:
 *****************************************************************************/
-#include <getopt.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <time.h>
+#include "espa.h"
 
 #include "error_handler.h"
 #include "envi_header.h"

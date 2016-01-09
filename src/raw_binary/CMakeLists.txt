@@ -36,6 +36,8 @@ set(LIBDIRS
 )
 
 set(RAW_BINSOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+include_directories (${CMAKE_CURRENT_SOURCE_DIR})
+include_directories (${CMAKE_SOURCE_DIR}/port)
 
 if(UNIX)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -O -W -Wall -Wno-sign-compare -Wno-unused-parameter") #-pedantic 
@@ -44,8 +46,10 @@ endif()
 
 include(find_anyproject)
 
+set(TARGET_LINK_LIB ${TARGET_LINK_LIB_GLOB})
+
 if(UNIX)
-  set(TARGET_LINK_LIB m)
+  set(TARGET_LINK_LIB ${TARGET_LINK_LIB} m)
 endif()
 
 find_anyproject(JPEG REQUIRED)

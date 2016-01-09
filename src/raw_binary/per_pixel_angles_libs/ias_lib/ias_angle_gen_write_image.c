@@ -1,5 +1,5 @@
-/* Standard Library Includes */
-#include <limits.h>
+
+#include "espa.h"
 
 /* IAS Library Includes */
 #include "ias_logging.h"       
@@ -34,7 +34,7 @@ int ias_angle_gen_write_image
 )        
 {
     FILE *output_file;           /* Output file pointer */
-    char ang_filename[PATH_MAX]; /* Output angle file name */
+    char ang_filename[MAXPATHLEN]; /* Output angle file name */
     int count;                   /* Total number of samples */
     int status;                  /* Status placeholder */
     const char *description;     /* Envi header description */
