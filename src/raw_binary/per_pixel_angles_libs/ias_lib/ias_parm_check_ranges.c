@@ -15,9 +15,6 @@ Note:   If a parameter is not set or there is not range, this routine
         will return SUCCESS without any processing and no comments.
 
 **************************************************************************/
-
-#include <stdio.h>
-#include <string.h>
 #include "ias_const.h"
 #include "ias_logging.h"
 #include "ias_parm.h"

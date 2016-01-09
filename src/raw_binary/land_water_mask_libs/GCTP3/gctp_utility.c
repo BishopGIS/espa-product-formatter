@@ -4,10 +4,7 @@ Name: gctp_utility.c
 Purpose: Provides a number of simple utility routines.
 
 ******************************************************************************/
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
-#include <limits.h>
+#include "espa.h"
 #include "local.h"
 #include "cproj.h"
 

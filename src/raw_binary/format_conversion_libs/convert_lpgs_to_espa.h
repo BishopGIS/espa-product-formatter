@@ -20,9 +20,7 @@ NOTES:
 #ifndef CONVERT_LPGS_TO_ESPA_H
 #define CONVERT_LPGS_TO_ESPA_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include "geotiffio.h"
 #include "xtiffio.h"
 #include "error_handler.h"

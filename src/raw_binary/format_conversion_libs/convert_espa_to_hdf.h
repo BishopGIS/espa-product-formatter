@@ -20,9 +20,7 @@ NOTES:
 #ifndef CONVERT_ESPA_TO_HDF_H
 #define CONVERT_ESPA_TO_HDF_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include <hdf.h>
 #include <mfhdf.h>
 #include "error_handler.h"

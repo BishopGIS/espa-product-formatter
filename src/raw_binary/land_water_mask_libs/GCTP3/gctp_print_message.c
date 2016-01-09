@@ -7,9 +7,7 @@ Purpose: Provides the means to print messages from GCTP.  By default a local
     their own routine to deal with messages from the library.
 
 ****************************************************************************/
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdarg.h>
+#include "espa.h"
 #include "gctp.h"
 #include "local.h"
 

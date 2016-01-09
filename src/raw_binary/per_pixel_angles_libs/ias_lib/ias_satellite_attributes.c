@@ -5,10 +5,6 @@ NAME: ias_satellite_attributes.c
 PURPOSE: Implements the Satellite Attributes library for applications
 
 **************************************************************************/
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
 #include "ias_logging.h"
 #include "ias_satellite_attributes.h"  /* Function prototypes and additional
                                           required headers */

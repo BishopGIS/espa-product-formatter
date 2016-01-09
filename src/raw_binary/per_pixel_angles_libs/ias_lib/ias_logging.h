@@ -1,7 +1,7 @@
 #ifndef LOGGING_H
 #define LOGGING_H
 
-#include <stdio.h>
+#include "espa.h"
 
 /****************************************************************************
 Notes on use:

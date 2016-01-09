@@ -111,6 +111,10 @@ check_include_file(math.h      HAVE_MATH_H)
 check_include_file(wchar.h     HAVE_WCHAR_H)
 check_include_file(stddef.h    HAVE_STDDEF_H)
 
+
+check_function_exists (flockfile  HAVE_FLOCKFILE)
+check_function_exists (funlockfile HAVE_FUNLOCKFILE)
+
 # Inspired from /usr/share/autoconf/autoconf/c.m4
 foreach(inline_keyword "inline" "__inline__" "__inline")
   if(NOT DEFINED C_INLINE)

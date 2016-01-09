@@ -38,6 +38,7 @@ set(INSTALL_BIN_DIR "${CMAKE_INSTALL_PREFIX}/bin" CACHE INTERNAL "Installation d
 set(INSTALL_LIB_DIR "${CMAKE_INSTALL_PREFIX}/lib" CACHE INTERNAL "Installation directory for libraries" FORCE)
 set(INSTALL_INC_DIR "${CMAKE_INSTALL_PREFIX}/include" CACHE INTERNAL "Installation directory for headers" FORCE)
 set(INSTALL_PYTHON_DIR "${CMAKE_INSTALL_PREFIX}/python" CACHE INTERNAL "Installation directory for python files" FORCE)
+set(INSTALL_DATA_DIR "${CMAKE_INSTALL_PREFIX}/share" CACHE INTERNAL "Installation directory for share files" FORCE)
 
 set(PACKAGE_VERSION_MAJOR 1)
 set(PACKAGE_VERSION_MINOR 0)
@@ -49,7 +50,7 @@ report_version(${PROJECT_NAME} ${PACKAGE_VERSION})
 include(configure)
 configure_file(${CMAKE_MODULE_PATH}/cmake_uninstall.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake IMMEDIATE @ONLY)
 
-if(BUILD_SHARED_LIBS)
+if(BUILD_SHARED_LIBS AND NOT WIN32) # on windows create all libraries static as I don't know what functions need to be exported
     set(LIB_TYPE SHARED)
 else()
     set(LIB_TYPE STATIC)
@@ -60,6 +61,6 @@ add_subdirectory(py_modules)
 add_subdirectory(port)
 add_subdirectory(src/raw_binary)
 
-install(DIRECTORY schema DESTINATION ${CMAKE_INSTALL_PREFIX}/schema PATTERN "*.xsd")
+install(DIRECTORY schema DESTINATION ${INSTALL_DATA_DIR}/${PROJECT_NAME} PATTERN "*.xsd")
 
 add_custom_target(uninstall COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)

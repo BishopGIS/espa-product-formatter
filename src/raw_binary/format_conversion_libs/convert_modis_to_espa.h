@@ -20,9 +20,7 @@ NOTES:
 #ifndef CONVERT_MODIS_TO_ESPA_H
 #define CONVERT_MODIS_TO_ESPA_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include <hdf.h>
 #include <mfhdf.h>
 #include <HdfEosDef.h>

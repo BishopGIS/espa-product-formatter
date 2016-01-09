@@ -36,7 +36,7 @@ PURPOSE:	The following functions are included in CPROJ.C.
 
 /* FIXME Temporarily disable the sincos function since newer versions of gcc
    seem to include it no matter what and it causes problems */
-#if 0
+#if WIN32
 /* Function to calculate the sine and cosine in one call.  Some computer
    systems have implemented this function, resulting in a faster implementation
    than calling each function separately.  It is provided here for those

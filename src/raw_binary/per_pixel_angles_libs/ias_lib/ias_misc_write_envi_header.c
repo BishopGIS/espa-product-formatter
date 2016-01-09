@@ -1,5 +1,3 @@
-#include "espa.h"
-
 /* IAS Includes */
 #include "ias_angle_gen_includes.h"
 #include "ias_const.h"

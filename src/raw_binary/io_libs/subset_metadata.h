@@ -19,9 +19,7 @@ NOTES:
 #ifndef SUBSET_METADATA_H
 #define SUBSET_METADATA_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include "error_handler.h"
 #include "espa_metadata.h"
 #include "parse_metadata.h"

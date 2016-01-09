@@ -16,7 +16,6 @@ ALGORITHM DESCRIPTION:
           its use (LAT, LON, or DEGREES).
 
 *****************************************************************************/
-#include <string.h>
 #include "ias_const.h"
 #include "ias_logging.h"
 #include "ias_geo.h"

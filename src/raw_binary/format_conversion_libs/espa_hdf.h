@@ -19,7 +19,7 @@ NOTES:
 #ifndef ESPA_HDF_H
 #define ESPA_HDF_H
 
-#include <stdlib.h>
+#include "espa.h"
 #include <stdbool.h>
 #include "hdf.h"
 #include "mfhdf.h"

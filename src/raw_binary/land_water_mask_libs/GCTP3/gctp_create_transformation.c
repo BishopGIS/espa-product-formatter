@@ -10,8 +10,7 @@ Note: The GCTP_TRANSFORMATION includes the input and output units specified.
     units it requires the creation of a different GCTP_TRANSFORMATION.
 
 ****************************************************************************/
-#include <stdlib.h>
-#include <stdio.h>
+#include "espa.h"
 #include "cproj.h"
 #include "gctp.h"
 #include "local.h"

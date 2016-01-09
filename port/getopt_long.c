@@ -55,12 +55,12 @@ static int optpos, optreset;
 static void getopt_msg(const char *a, const char *b, const char *c, size_t l)
 { 
 	FILE *f = stderr;
-	flockfile(f);
+    _FLOCKFILE(f);
 	fwrite(a, strlen(a), 1, f)
 	&& fwrite(b, strlen(b), 1, f)
 	&& fwrite(c, l, 1, f)
 	&& putc('\n', f);
-	funlockfile(f);
+    _FUNLOCKFILE(f);
 }
 
 static int musl_getopt(int argc, char * const argv[], const char *optstring)

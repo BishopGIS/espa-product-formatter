@@ -5,9 +5,7 @@ Purpose: Performs a coordinate transformation with the given previously
     created transformation.
 
 ****************************************************************************/
-#include <stdlib.h>
-#include <stdio.h>
-#include <limits.h>
+#include "espa.h"
 #include "gctp.h"
 #include "local.h"
 #include "cproj.h"

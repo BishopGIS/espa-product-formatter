@@ -20,8 +20,7 @@ NOTES:
 #ifndef ESPA_GEOLOC_H
 #define ESPA_GEOLOC_H
 
-#include <stdlib.h>
-#include <math.h>
+#include "espa.h"
 #include <stdbool.h>
 #include "espa_common.h"
 #include "error_handler.h"

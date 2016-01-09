@@ -19,9 +19,7 @@ NOTES:
 #ifndef GENERATE_JULIAN_BAND_H
 #define GENERATE_JULIAN_BAND_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include "error_handler.h"
 #include "espa_metadata.h"
 #include "parse_metadata.h"

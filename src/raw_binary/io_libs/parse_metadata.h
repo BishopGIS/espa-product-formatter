@@ -20,9 +20,7 @@ NOTES:
 #ifndef PARSE_METADATA_H
 #define PARSE_METADATA_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 #include <libxml/xmlreader.h>

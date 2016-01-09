@@ -47,10 +47,7 @@ Raj Gejjagaraguppe (ARC)  1-24-97       Modified and added code to make
 !END****************************************************************************
 */
 
-#include <stdlib.h>
-#include <limits.h>
-#include <math.h>
-#include <stdio.h>
+#include "espa.h"
 #include "cproj.h"
 #include "isin.h"
 #include "local.h"

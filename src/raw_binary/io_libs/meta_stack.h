@@ -20,9 +20,7 @@ NOTES:
 #ifndef META_STACK_H
 #define META_STACK_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include "error_handler.h"
 
 /* Defines */

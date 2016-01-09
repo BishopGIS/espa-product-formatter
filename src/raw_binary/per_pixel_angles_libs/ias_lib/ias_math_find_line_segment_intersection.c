@@ -7,7 +7,7 @@ RETURNS:
     IAS_LINES_INTERSECT, IAS_LINES_PARALLEL, or IAS_LINES_DO_NOT_INTERSECT
 
 ******************************************************************************/
-#include <math.h>
+#include "espa.h"
 #include "ias_math.h"
 
 /* Tolerance on whether two lines are parallel */

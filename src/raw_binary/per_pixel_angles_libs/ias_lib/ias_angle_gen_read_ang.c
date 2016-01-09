@@ -1,8 +1,3 @@
-/* Standard Library Includes */
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-
 /* IAS Library Includes */
 #include "ias_angle_gen_includes.h"
 #include "ias_logging.h"

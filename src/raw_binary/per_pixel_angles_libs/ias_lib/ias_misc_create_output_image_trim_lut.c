@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "ias_logging.h"
 #include "ias_miscellaneous.h"
 

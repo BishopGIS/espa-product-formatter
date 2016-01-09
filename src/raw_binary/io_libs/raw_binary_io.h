@@ -19,9 +19,7 @@ NOTES:
 #ifndef RAW_BINARY_IO_H
 #define RAW_BINARY_IO_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include "error_handler.h"
 
 /* Prototypes */

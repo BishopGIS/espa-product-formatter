@@ -15,7 +15,7 @@ pointer  Returns a pointer to the string so it can immediately be used as
 NOTES:
 The original string is converted in place.
 ******************************************************************************/
-#include <ctype.h>              /* toupper prototype */
+#include "espa.h"              /* toupper prototype */
 #include "ias_miscellaneous.h"
 
 char *ias_misc_convert_to_uppercase 

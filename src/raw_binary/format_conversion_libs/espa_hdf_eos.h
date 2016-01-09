@@ -20,9 +20,7 @@ NOTES:
 #ifndef ESPA_HDF_EOS_H
 #define ESPA_HDF_EOS_H
 
-#include <stdlib.h>
-#include <stdbool.h>
-#include <math.h>
+#include "espa.h"
 #include "hdf.h"
 #include "mfhdf.h"
 #include "HdfEosDef.h"

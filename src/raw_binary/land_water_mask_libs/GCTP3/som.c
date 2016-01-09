@@ -21,8 +21,7 @@ Algorithm References:
 2.  "Software Documentation for GCTP General Cartographic Transformation
     Package", U.S. Geological Survey National Mapping Division, May 1982.
 *******************************************************************************/
-#include <stdlib.h>
-#include <math.h>
+#include "espa.h"
 #include "cproj.h"
 #include "gctp.h"
 #include "local.h"

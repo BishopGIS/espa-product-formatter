@@ -20,9 +20,7 @@ NOTES:
 #ifndef CONVERT_ESPA_TO_GTIF_H
 #define CONVERT_ESPA_TO_GTIF_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include "error_handler.h"
 #include "espa_metadata.h"
 #include "parse_metadata.h"

@@ -4,8 +4,6 @@ NAME:    ias_parm_provide_help module
 PURPOSE: print out the help, template, and "load table" information
 
 **************************************************************************/
-#include "espa.h"
-
 #include "ias_parm.h"
 #include "ias_logging.h"
 #include "ias_const.h"

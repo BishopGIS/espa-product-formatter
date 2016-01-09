@@ -40,10 +40,7 @@ PURPOSE:    Integerized Sinusoidal Library Functions - library routines to
 *****************************************************************************/
 
 
-#include <stdlib.h>
-#include <limits.h>
-#include <math.h>
-#include <stdio.h>
+#include "espa.h"
 #include "cproj.h"
 #include "isin.h"
 #include "local.h"

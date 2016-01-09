@@ -1,3 +1,5 @@
+#ifndef ESPA_H
+#define ESPA_H
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
@@ -80,3 +82,11 @@ so override ridiculously small values! */
 #undef MAXPATHLEN
 #define MAXPATHLEN 255
 #endif
+
+#ifdef _WIN32
+#include <windows.h>
+#define	ftello	_ftelli64
+#define	fseeko	_fseeki64
+#endif	//	#ifdef _WIN32
+
+#endif //ESPA_H

@@ -11,9 +11,6 @@ SUCCESS  All required items successfully read from the ODL file
 ERROR    error locating or reading ODL file
 
 **************************************************************************/
-
-#include <stdio.h>
-#include <string.h>
 #include "ias_parm.h"
 #include "ias_parm_private.h"
 #include "ias_const.h"

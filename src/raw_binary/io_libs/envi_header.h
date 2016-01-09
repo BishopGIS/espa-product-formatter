@@ -21,9 +21,7 @@ NOTES:
 #ifndef ENVI_HEADER_H
 #define ENVI_HEADER_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include "error_handler.h"
 #include "espa_metadata.h"
 #include "gctp_defines.h"

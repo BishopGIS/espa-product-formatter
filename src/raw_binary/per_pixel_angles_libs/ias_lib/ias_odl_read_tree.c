@@ -13,8 +13,6 @@ successful        Pointer to ODL tree
 NULL              Failure
 
 ******************************************************************************/
-#include "espa.h"
-
 #include "lablib3.h"                 /* prototypes for the ODL functions */
 #include "ias_odl.h"
 #include "ias_logging.h"

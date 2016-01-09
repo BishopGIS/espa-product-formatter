@@ -5,8 +5,7 @@ Purpose: Provides some routines for printing out information about projection
     parameters.
 
 *******************************************************************************/
-#include <stdio.h>
-#include <string.h>
+#include "espa.h"
 #include "cproj.h"
 #include "local.h"
 

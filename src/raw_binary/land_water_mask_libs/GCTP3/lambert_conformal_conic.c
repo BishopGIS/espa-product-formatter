@@ -14,8 +14,7 @@ ALGORITHM REFERENCES
 2.  Snyder, John P. and Voxland, Philip M., "An Album of Map Projections",
     U.S. Geological Survey Professional Paper 1453 , United State Government
 *******************************************************************************/
-#include <stdlib.h>
-#include <math.h>
+#include "espa.h"
 #include "cproj.h"
 #include "gctp.h"
 #include "local.h"

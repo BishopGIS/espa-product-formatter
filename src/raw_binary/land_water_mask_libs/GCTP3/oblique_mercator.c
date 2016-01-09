@@ -15,7 +15,7 @@ Algorithm References
     U.S. Geological Survey Professional Paper 1453 , United State Government
     Printing Office, Washington D.C., 1989.
 *******************************************************************************/
-#include <stdlib.h>
+#include "espa.h"
 #include "cproj.h"
 #include "gctp.h"
 #include "local.h"
