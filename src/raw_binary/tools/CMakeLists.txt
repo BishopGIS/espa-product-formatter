@@ -57,7 +57,7 @@ foreach(UTIL ${UTILS})
     endif()    
     if(TARGET_LINK_LIB)
         list(REMOVE_DUPLICATES TARGET_LINK_LIB)
-        target_link_libraries(${UTIL} PRIVATE ${TARGET_LINK_LIB})
+        target_link_libraries(${UTIL} ${TARGET_LINK_LIB})
     endif() 
 endforeach()
 

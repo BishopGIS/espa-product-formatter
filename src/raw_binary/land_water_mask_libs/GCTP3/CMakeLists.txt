@@ -117,9 +117,8 @@ if(DEPENDENCY_LIB)
 endif()    
 if(TARGET_LINK_LIB)
     list(REMOVE_DUPLICATES TARGET_LINK_LIB)
-    target_link_libraries(${LIB_NAME} PRIVATE ${TARGET_LINK_LIB})
+    target_link_libraries(${LIB_NAME} ${TARGET_LINK_LIB})
 endif()    
-
 
 set(TARGET_LINK_LIB ${TARGET_LINK_LIB} ${LIB_NAME} PARENT_SCOPE)
 

@@ -25,6 +25,14 @@
 # DEALINGS IN THE SOFTWARE.
 ################################################################################
 
+if(WIN32)
+    add_definitions(-DWIN32)
+    list(APPEND TARGET_LINK_LIB_GLOB ws2_32.lib Secur32.lib)
+    if (MSVC)
+        add_definitions (-D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NON_CONFORMING_SWPRINTFS -D_CRT_SECURE_NO_DEPRECATE)
+    endif()
+endif()       
+
 set(LIBDIRS	
     common 
     io_libs 
@@ -52,14 +60,15 @@ if(UNIX)
   set(TARGET_LINK_LIB ${TARGET_LINK_LIB} m)
 endif()
 
+
+find_anyproject(ZLIB REQUIRED)
+find_anyproject(LibXml2 REQUIRED)
 find_anyproject(JPEG REQUIRED)
+find_anyproject(JBIG REQUIRED)
 find_anyproject(TIFF REQUIRED)
 find_anyproject(GeoTIFF REQUIRED)
 find_anyproject(HDF4 REQUIRED)
 find_anyproject(HDFEOS2 REQUIRED)
-find_anyproject(LibXml2 REQUIRED)
-find_anyproject(ZLIB REQUIRED)
-find_anyproject(JBIG REQUIRED)
 
 # debug stuff
 #get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
@@ -76,4 +85,3 @@ endforeach()
 add_subdirectory(tools)
 
 message(STATUS "TARGET_LINK_LIB ${TARGET_LINK_LIB}")
-
