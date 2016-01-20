@@ -52,7 +52,7 @@ if(UNIX)
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O -W -Wall -Wno-sign-compare -Wno-unused-parameter") 
 endif()
 
-include(find_anyproject)
+include(FindAnyProject)
 
 set(TARGET_LINK_LIB ${TARGET_LINK_LIB_GLOB})
 
