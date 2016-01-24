@@ -84,7 +84,6 @@ if(DEPENDENCY_LIB)
     add_dependencies(${LIB_NAME} ${DEPENDENCY_LIB})  
 endif()    
 if(TARGET_LINK_LIB)
-    list(REMOVE_DUPLICATES TARGET_LINK_LIB)
     target_link_libraries(${LIB_NAME} ${TARGET_LINK_LIB})
 endif()    
 

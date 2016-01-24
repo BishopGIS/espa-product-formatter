@@ -33,6 +33,15 @@ if(WIN32)
     endif()
 endif()       
 
+set(TARGET_LINK_LIB_GLOB ${TARGET_LINK_LIB_GLOB} 
+    debug 
+    D:/libs/gdal_2.1.0_for_use-build/lib/gdal_i.lib 
+    optimized 
+    D:/libs/gdal_2.1.0_for_use-build/lib/gdal_i.lib
+    )
+    
+    message(STATUS "TARGET_LINK_LIB_GLOB ${TARGET_LINK_LIB_GLOB}")
+
 set(LIBDIRS	
     common 
     io_libs 
