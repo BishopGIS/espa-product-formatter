@@ -8,6 +8,10 @@ include(CheckTypeSize)
 include(CheckFunctionExists)
 include(TestBigEndian)
 
+if(CMAKE_GENERATOR_TOOLSET MATCHES "*xp")
+    add_definitions(-D_WIN32_WINNT=0x0501)
+endif()
+
 # Check if the compiler supports each of the following additional
 # flags, and enable them if supported.  This greatly improves the
 # quality of the build by checking for a number of common problems,
